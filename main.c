@@ -18,7 +18,7 @@ void main (void)
     int spiChannel = 0;
     int clock = 1000000;
     unsigned char Str[]="Hello Jimmy";
-    //unsigned char test = '~';
+    //unsigned char test = '~'; test
     //printf("SPI is ready, spi1=%d\n", test);    
 
     printf("Starting SPI Test\n");
