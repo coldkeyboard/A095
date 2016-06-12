@@ -1,0 +1,6 @@
+main:main.o spiOLED.o
+	gcc -0 main main.o spiOLED.o
+main.o:main.c main.h
+	gcc -c main.c
+spiOLED.o:spiOLED.c spiOLED.h fon.h
+	gcc -c spiOLED.c
