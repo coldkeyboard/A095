@@ -1,13 +1,12 @@
 #include "ShowImage.h"
 
-unsigned char *mydata;
-
-void ShowImage()
+void ShowImage(char *filename)
 {
+  unsigned char *mydata;
   printf("hello Jimmy~~\n");
  	BITMAPINFOHEADER bitmapInfoHeader;
-	mydata = LoadBitmapFile("6.bmp", &bitmapInfoHeader);
-  Picture_out();
+	mydata = LoadBitmapFile(filename, &bitmapInfoHeader);
+  Picture_out(mydata);
 }
 
 unsigned char *LoadBitmapFile(char *filename, BITMAPINFOHEADER *bitmapInfoHeader) 
@@ -96,17 +95,11 @@ unsigned char *LoadBitmapFile(char *filename, BITMAPINFOHEADER *bitmapInfoHeader
 
 
 //--------------------------------------------------- Copy from Ritdisplay.
-void Picture_out()     
+void Picture_out(unsigned char *mydata)     
 {
-  unsigned char xdata, *ptr;
+  unsigned char *ptr;
   unsigned char i,j,k,Column_HighByte,Column_LowByte,Low_byte,buffer;
-//  unsigned char mydata[128*8];
-//  int ii;
-//  printf("hello Jimmy2~~\n");
-//  for(ii=0;ii<(128*8);ii++)
-//  {
-//    mydata[ii]=0xf0;
-//  }  
+
   ptr=mydata;
   k=0;
   for(i=0;i<128;i++)

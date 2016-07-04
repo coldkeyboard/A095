@@ -3,8 +3,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void ShowImage();
-void Picture_out();  
+void ShowImage(char *filename);
+void Picture_out(unsigned char *mydata); 
 #pragma pack(push, 1) 
 typedef struct tagBITMAPFILEHEADER 
 { 
