@@ -43,6 +43,8 @@ void main (void)
     showP6x8String(0,3,"Have a nice day");
     showP6x8String(0,5,"2016/06/10 :)");
     scroll();
+    
+    ShowImage();
 
     //allPixelSwitch(OFF);
 

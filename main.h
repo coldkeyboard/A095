@@ -11,6 +11,7 @@
 #include <wiringPi.h>
 #include <wiringPiSPI.h>
 #include "spiOLED.h"
+#include "ShowImage.h"
 
 #define	TRUE	(1==1)
 #define	FALSE	(!TRUE)
