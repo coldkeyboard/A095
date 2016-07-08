@@ -44,7 +44,8 @@ void main (void)
     showP6x8String(0,5,"2016/06/10 :)");
     scroll();
     
-    ShowImage("6.bmp");
+    //ShowImage("7.bmp");
+    
 
     //allPixelSwitch(OFF);
 
