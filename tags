@@ -1,0 +1,61 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BITMAPFILEHEADER	ShowImage.h	/^}BITMAPFILEHEADER; $/;"	t	typeref:struct:tagBITMAPFILEHEADER
+BITMAPINFOHEADER	ShowImage.h	/^}BITMAPINFOHEADER; $/;"	t	typeref:struct:tagBITMAPINFOHEADER
+DC	spiOLED.h	9;"	d
+F6x8	font.c	/^const unsigned char F6x8[92][6] =$/;"	v
+F6x8	font.h	/^const unsigned char F6x8[92][6];$/;"	v
+FALSE	main.h	17;"	d
+LED_SetPos	spiOLED.c	/^void LED_SetPos(unsigned char ucIdxX, unsigned char ucIdxY)$/;"	f
+LoadBitmapFile	ShowImage.c	/^unsigned char *LoadBitmapFile(char *filename, BITMAPINFOHEADER *bitmapInfoHeader) $/;"	f
+MAX_SIZE	main.h	21;"	d
+NUM_TIMES	main.h	20;"	d
+OFF	spiOLED.h	11;"	d
+ON	spiOLED.h	10;"	d
+Picture_out	ShowImage.c	/^void Picture_out(unsigned char *mydata)     $/;"	f
+RESET	spiOLED.h	8;"	d
+SPI_CHAN	main.h	19;"	d
+ShowImage	ShowImage.c	/^void ShowImage(char *filename)$/;"	f
+TRUE	main.h	16;"	d
+__FONT1_H__	font.h	2;"	d
+__MAIN_H__	main.h	2;"	d
+__SHOWIMAGE_H__	ShowImage.h	2;"	d
+__SPIOLED_H__	spiOLED.h	2;"	d
+allPixelSwitch	spiOLED.c	/^void allPixelSwitch(unsigned char status)$/;"	f
+bOffBits	ShowImage.h	/^    int bOffBits;				\/\/specifies the offset in bytes from the bitmapfileheader to the bitmap bits $/;"	m	struct:tagBITMAPFILEHEADER
+bfReserved1	ShowImage.h	/^    short bfReserved1;			\/\/reserved; must be 0 $/;"	m	struct:tagBITMAPFILEHEADER
+bfReserved2	ShowImage.h	/^    short bfReserved2;			\/\/reserved; must be 0 $/;"	m	struct:tagBITMAPFILEHEADER
+bfSize	ShowImage.h	/^	int bfSize;					\/\/specifies the size in bytes of the bitmap file $/;"	m	struct:tagBITMAPFILEHEADER
+bfType	ShowImage.h	/^	short bfType;					\/\/specifies the file type $/;"	m	struct:tagBITMAPFILEHEADER
+biBitCount	ShowImage.h	/^    short biBitCount;		\/\/specifies the number of bit per pixel $/;"	m	struct:tagBITMAPINFOHEADER
+biClrImportant	ShowImage.h	/^    int biClrImportant;	\/\/number of colors that are important $/;"	m	struct:tagBITMAPINFOHEADER
+biClrUsed	ShowImage.h	/^    int biClrUsed;  		\/\/number of colors used by the bitmap $/;"	m	struct:tagBITMAPINFOHEADER
+biCompression	ShowImage.h	/^    int biCompression;	\/\/specifies the type of compression $/;"	m	struct:tagBITMAPINFOHEADER
+biHeight	ShowImage.h	/^    int biHeight;			\/\/species height in pixels $/;"	m	struct:tagBITMAPINFOHEADER
+biPalette	ShowImage.h	/^    int biPalette;      \/\/Palette$/;"	m	struct:tagBITMAPINFOHEADER
+biPlanes	ShowImage.h	/^    short biPlanes;			\/\/specifies the number of color planes, must be 1 $/;"	m	struct:tagBITMAPINFOHEADER
+biSize	ShowImage.h	/^    int biSize;			\/\/specifies the number of bytes required by the struct $/;"	m	struct:tagBITMAPINFOHEADER
+biSizeImage	ShowImage.h	/^    int biSizeImage;  	\/\/size of image in bytes $/;"	m	struct:tagBITMAPINFOHEADER
+biWidth	ShowImage.h	/^    int biWidth;			\/\/specifies width in pixels $/;"	m	struct:tagBITMAPINFOHEADER
+biXPelsPerMeter	ShowImage.h	/^    int biXPelsPerMeter;	\/\/number of pixels per meter in x axis $/;"	m	struct:tagBITMAPINFOHEADER
+biYPelsPerMeter	ShowImage.h	/^    int biYPelsPerMeter;	\/\/number of pixels per meter in y axis $/;"	m	struct:tagBITMAPINFOHEADER
+commandOutput	spiOLED.c	/^void commandOutput( unsigned char command )$/;"	f
+dataOutput	spiOLED.c	/^void dataOutput( unsigned char data )$/;"	f
+initial	spiOLED.c	/^void initial()$/;"	f
+main	RfcommServer.c	/^int main(int argc, char **argv)$/;"	f
+main	main.c	/^void main (void)$/;"	f
+myFd	main.c	/^static int myFd ;$/;"	v	file:
+reset	spiOLED.c	/^void reset()$/;"	f
+scroll	spiOLED.c	/^void scroll()$/;"	f
+setPinMode	spiOLED.c	/^void setPinMode()$/;"	f
+showP6x8Char	spiOLED.c	/^void showP6x8Char(unsigned char ucIdxX, unsigned char ucIdxY, unsigned char ucData)$/;"	f
+showP6x8String	spiOLED.c	/^void showP6x8String(unsigned char ucIdxX, unsigned char ucIdxY, unsigned char ucDataStr[])$/;"	f
+spiSetup	main.c	/^void spiSetup (int speed)$/;"	f
+t1	ShowImage.h	/^    int t1;             \/\/for test1$/;"	m	struct:tagBITMAPINFOHEADER
+t2	ShowImage.h	/^    int t2;             \/\/for test2$/;"	m	struct:tagBITMAPINFOHEADER
+tagBITMAPFILEHEADER	ShowImage.h	/^typedef struct tagBITMAPFILEHEADER $/;"	s
+tagBITMAPINFOHEADER	ShowImage.h	/^typedef struct tagBITMAPINFOHEADER $/;"	s

@@ -7,11 +7,13 @@
 #include <stdint.h>
 #include <string.h>
 #include <errno.h>
+#include <pthread.h>
 
 #include <wiringPi.h>
 #include <wiringPiSPI.h>
 #include "spiOLED.h"
 #include "ShowImage.h"
+#include "BluetoothThread.h"
 
 #define	TRUE	(1==1)
 #define	FALSE	(!TRUE)

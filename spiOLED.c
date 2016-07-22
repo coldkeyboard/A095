@@ -1,5 +1,22 @@
 #include "spiOLED.h"
 
+void SetupSPI()
+{
+    int spi1;    
+    int spiChannel = 0;
+    int clock = 1000000;
+    
+    //unsigned char test = '~'; test
+    //printf("SPI is ready, spi1=%d\n", test);    
+
+    printf("Starting SPI Test\n");
+    wiringPiSetup();    
+    spi1 = wiringPiSPISetup(spiChannel,clock);    
+    if(spi1!=-1)
+      printf("SPI is ready, spi1=%d\n", spi1);
+    else
+      printf("SPI Setup Fail, spi1=%d\n", spi1);
+}
 void setPinMode()
 {
   pinMode(RESET, 1);  //output =1
@@ -120,6 +137,21 @@ void allPixelSwitch(unsigned char status)
        dataOutput(status);
      }
    }  
+}
+
+void CharacterDemo()
+{
+    unsigned char Str[]="Hello Jimmy";
+    showP6x8Char(0,0,'U');
+    showP6x8Char(6,0,'S');
+    showP6x8Char(12,0,'M');
+    showP6x8Char(18,0,'P');
+
+
+    showP6x8String(0,2,Str);
+    showP6x8String(0,3,"Have a nice day");
+    showP6x8String(0,5,"2016/07/22 :)");
+    scroll();
 }
 
 void scroll()
