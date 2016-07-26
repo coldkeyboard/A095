@@ -23,6 +23,7 @@ void showP6x8Char(unsigned char ucIdxX, unsigned char ucIdxY, unsigned char ucDa
 void showP6x8String(unsigned char ucIdxX, unsigned char ucIdxY, unsigned char ucDataStr[]);
 void LED_SetPos(unsigned char ucIdxX, unsigned char ucIdxY);
 void CharacterDemo();
+void CharacterDemo2();
 void scroll();
 
 

@@ -21,7 +21,7 @@ unsigned char *LoadBitmapFile(char *filename, BITMAPINFOHEADER *bitmapInfoHeader
     if (filePtr == NULL) { 
 		printf("Couldn't open file\n"); 
     	return NULL; 
-	  } 
+	  }
 	 
     //read the bitmap file header 
     fread(&bitmapFileHeader, sizeof(BITMAPFILEHEADER),1,filePtr);  

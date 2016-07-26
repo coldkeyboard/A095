@@ -1,9 +1,9 @@
 #include "main.h"
 
-extern unsigned demoMode;
+extern unsigned char demoMode;
 void main (void)
 {
-    unsigned currentMode=0;
+    unsigned char currentMode= 'a';
     SetupSPI();    
     setPinMode();
     reset();
@@ -11,17 +11,24 @@ void main (void)
     CreateThread();
     //demoMode=2;
     while(1)
-    {        
+    {
+        currentMode = demoMode; 
+        printf("demoMode [%d]\n", demoMode);    
+        printf("currentMode [%d]\n", currentMode);     
         switch (demoMode) 
         {
-            case 0:
+            case 'a':
               CharacterDemo(); 
+              printf("currentMode [%d]\n", currentMode);
               break;
-            case 1:
-              ShowImage("7.bmp");
+            case 'b':
+              CharacterDemo2();
+              break;
+            case 'c':
+              ShowImage("/home/pi/Jimmy/MyOLED/RPI_OLED/7.bmp");
               break;
             default:
-              ShowImage("6.bmp");
+              ShowImage("/home/pi/Jimmy/MyOLED/RPI_OLED/6.bmp");
               break;             
         }    
         while(demoMode == currentMode);

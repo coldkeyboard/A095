@@ -141,6 +141,7 @@ void allPixelSwitch(unsigned char status)
 
 void CharacterDemo()
 {
+    allPixelSwitch(OFF);
     unsigned char Str[]="Hello Jimmy";
     showP6x8Char(0,0,'U');
     showP6x8Char(6,0,'S');
@@ -151,6 +152,22 @@ void CharacterDemo()
     showP6x8String(0,2,Str);
     showP6x8String(0,3,"Have a nice day");
     showP6x8String(0,5,"2016/07/22 :)");
+    scroll();
+}
+
+void CharacterDemo2()
+{
+    allPixelSwitch(OFF);
+    unsigned char Str[]="TEST TEST";
+    showP6x8Char(0,0,'T');
+    showP6x8Char(6,0,'E');
+    showP6x8Char(12,0,'S');
+    showP6x8Char(18,0,'T');
+
+
+    showP6x8String(0,2,Str);
+    showP6x8String(0,3,"Test Test Test");
+    showP6x8String(0,5,"2016/07/26 :)");
     scroll();
 }
 
