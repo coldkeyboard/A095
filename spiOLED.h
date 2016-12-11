@@ -25,6 +25,11 @@ void LED_SetPos(unsigned char ucIdxX, unsigned char ucIdxY);
 void CharacterDemo();
 void CharacterDemo2();
 void scroll();
+void A095_initial();
+void OLED_SendCmdAndData(unsigned char command, unsigned char data);
+void OLED_SendCmd (unsigned char command);
+void OLED_SendData (unsigned char data);
+void A095_test();
 
 
 #endif
