@@ -10,9 +10,8 @@ void main (void)
     reset();
     A095_initial();
     A095_test();
-    while(1)
-    {
-    }
+    ReadRegister();
+
     //initial();   
     //CreateThread();
     //demoMode=2;

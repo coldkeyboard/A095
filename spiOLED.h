@@ -30,6 +30,7 @@ void OLED_SendCmdAndData(unsigned char command, unsigned char data);
 void OLED_SendCmd (unsigned char command);
 void OLED_SendData (unsigned char data);
 void A095_test();
+void ReadRegister();
 
 
 #endif

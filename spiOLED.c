@@ -208,6 +208,32 @@ void OLED_SendData (unsigned char data)
     digitalWrite( DC, 0);
 }
 
+void ReadRegister()
+{
+    unsigned char data[16];
+    OLED_SendCmdAndData(0x51, 0xaa);
+    OLED_SendCmdAndData(0x36, 0x00);
+    delay(50); // if no delay, this will fial.
+    data[0] = 0x2E;
+    wiringPiSPIDataRW(0, data, 16);    
+    printf("[%x]\n", data[0]); 
+    printf("[%x]\n", data[1]); 
+    printf("[%x]\n", data[2]); 
+    printf("[%x]\n", data[3]); 
+    printf("[%x]\n", data[4]); 
+    printf("[%x]\n", data[5]); 
+    printf("[%x]\n", data[6]); 
+    printf("[%x]\n", data[7]); 
+    printf("[%x]\n", data[8]); 
+    printf("[%x]\n", data[9]); 
+    printf("[%x]\n", data[10]); 
+    printf("[%x]\n", data[11]); 
+    printf("[%x]\n", data[12]); 
+    printf("[%x]\n", data[13]); 
+    printf("[%x]\n", data[14]); 
+    printf("[%x]\n", data[15]); 
+}
+
 void A095_test()
 {
 //int allPixel=3;
@@ -240,21 +266,48 @@ unsigned char command = 0x2c;
 unsigned char data[length];
 int i,j;
 
+    //getchar();
     digitalWrite( DC, 0);
     wiringPiSPIDataRW(0, &command, 1);
     digitalWrite( DC, 1);
-      
+    
     for(j=0;j<20;j++)
     {
       for (i=0; i<(length);i++)
       {
-        if (i%3==1)      //B
-          data[i]=0x00;
-        else if (i%3==2) //R
-          data[i]=0x00;  
-        else  
-          data[i]=0xff;  //G
+        if (j<4)
+        {
+          if (i%3==1)      data[i]=0xff; //B
+          else if (i%3==2) data[i]=0xff; //R 
+          else             data[i]=0xff; //G         
+        }
+        else if (j<8)
+        {
+          if (i%3==1)      data[i]=0x00; //B
+          else if (i%3==2) data[i]=0x00; //R 
+          else             data[i]=0x00; //G 
+        }
+        else if (j<12)
+        {
+          if (i%3==1)      data[i]=0x00; //B
+          else if (i%3==2) data[i]=0xff; //R 
+          else             data[i]=0x00; //G
+        }
+        else if (j<16)
+        {
+          if (i%3==1)      data[i]=0x00; //B
+          else if (i%3==2) data[i]=0x00; //R 
+          else             data[i]=0xff; //G
+        }
+        else if (j<20)
+        {
+          if (i%3==1)      data[i]=0xff; //B
+          else if (i%3==2) data[i]=0x00; //R 
+          else             data[i]=0x00; //G
+        }
+        
       }
+      delay(30);
       wiringPiSPIDataRW(0, data, length);
     }
     digitalWrite( DC, 0);
@@ -411,7 +464,7 @@ void A095_initial()
 	OLED_SendCmdAndData(0xFE,0x0A);
 	OLED_SendCmdAndData(0x29,0x90);
 	OLED_SendCmdAndData(0xFE,0x05);
-	OLED_SendCmdAndData(0x05,0x01);
+	OLED_SendCmdAndData(0x05,0x01);  //for Power IC
 	OLED_SendCmdAndData(0xFE,0x00);
 	OLED_SendCmdAndData(0x35,0x00);
 
